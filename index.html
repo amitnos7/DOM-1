@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+
+
+        *{
+            text-align:initial;
+            box-sizing:content-box;
+            color: black;
+        }
+
+        input{
+            color: black;
+        }
+
+        button{
+            color:black;
+        }
+
+        body{
+            background:  wheat;
+        }
+
+    .highlight{background-color: yellow;}
+    .underline{text-decoration: underline;}
+    .bold{font-weight: bold;}
+
+    .visible{
+        display: block;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+
+
+    .thebtn{
+        pointer-events: none;
+        background-color: red;
+    }
+
+
+
+    </style>
+
+
+
+<script>
+
+
+    function toggle(id){
+
+        const el = document.getElementById(id)
+
+        el.classList.replace('visible','hidden')
+
+    }
+
+
+    function toggleButton(el){
+
+        el.textContent = 'Button has been clicked'
+        el.classList.add('thebtn')
+
+
+
+    }
+
+
+    function addClass(){
+     
+        const val = document.getElementById('in').value?.trim()
+
+        if (val){
+
+            const el = document.getElementById('elm')
+
+            el.classList.toggle(val)
+
+
+        }
+    
+    }
+    
+    
+    </script>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+  <h1><b>DOM#1</b></h1> 
+   
+   
+   
+   <br>
+   <br>
+
+    <div id ="elm"> 
+<p>To make the text bold type bold in the input line. 
+    
+</p>
+<p>
+    to make the text with underline type underline int the input line.
+</p>
+to make the text highlighted type highlight in the input line.
+<p>
+
+</p>
+</div>
+<input placeholder="highlight,underline,bold" id="in" type="text">
+<button onclick="addClass()">Add Class</button>
+
+<br>
+<br>
+<hr>
+
+
+<p class="visible" id="p1">To make the first paragraph disappare press P1 button</p>
+
+<p class="visible" id="p2">To make the first paragraph disappare press P2 button</p>
+
+<p class="visible" id="p3">To make the first paragraph disappare press P3 button</p>
+
+<button onclick="toggle('p1')">P1</button>
+<button onclick="toggle('p2')">P2</button>
+<button onclick="toggle('p3')">P3</button>
+
+<hr>
+<br>
+<button onclick="toggleButton(this)">Click to change color</button>
+
+</body>
+
+
+
+</html>
