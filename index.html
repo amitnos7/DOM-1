@@ -3,53 +3,37 @@
 <head>
 
     <style>
-
-
         *{
             text-align:initial;
             box-sizing:content-box;
             color: black;
         }
-
         input{
             color: black;
         }
-
         button{
             color:black;
         }
-
         body{
             background:  wheat;
         }
-
     .highlight{background-color: yellow;}
     .underline{text-decoration: underline;}
     .bold{font-weight: bold;}
-
     .visible{
         display: block;
     }
-
     .hidden{
         display: none;
     }
-
-
-
-    .thebtn{
+    .thebutton{
         pointer-events: none;
         background-color: red;
     }
 
-
-
     </style>
 
-
-
 <script>
-
 
     function toggle(id){
 
@@ -59,16 +43,11 @@
 
     }
 
-
     function toggleButton(el){
 
         el.textContent = 'Button has been clicked'
-        el.classList.add('thebtn')
-
-
-
+        el.classList.add('thebutton')
     }
-
 
     function addClass(){
      
@@ -79,17 +58,12 @@
             const el = document.getElementById('elm')
 
             el.classList.toggle(val)
-
-
         }
     
     }
-    
-    
+      
     </script>
-
-
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
